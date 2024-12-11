@@ -1,0 +1,9 @@
+from ._dill import _locate_object as at, _proxy_helper as reference
+
+__all__ = ["parent", "reference", "at", "parents", "children"]
+
+def parent(obj, objtype, ignore=()): ...
+def parents(obj, objtype, depth: int = 1, ignore=()): ...
+def children(obj, objtype, depth: int = 1, ignore=()): ...
+
+refobject = at
