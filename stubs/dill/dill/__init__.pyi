@@ -1,4 +1,6 @@
 from typing import Any
+
+from . import detect, logger, session, source, temp
 from .__info__ import __author__, __doc__, __license__, __version__
 from ._dill import (
     CONTENTS_FMODE,
@@ -7,8 +9,8 @@ from ._dill import (
     HANDLE_FMODE,
     HIGHEST_PROTOCOL,
     PickleError,
-    PickleWarning,
     Pickler,
+    PickleWarning,
     PicklingError,
     PicklingWarning,
     Unpickler,
@@ -24,14 +26,7 @@ from ._dill import (
     pickles,
     register,
 )
-from .session import (
-    dump_module,
-    dump_session,
-    load_module,
-    load_module_asdict,
-    load_session,
-)
-from . import detect, logger, session, source, temp
+from .session import dump_module, dump_session, load_module, load_module_asdict, load_session
 from .settings import settings
 
 __all__ = [
